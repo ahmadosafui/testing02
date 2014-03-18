@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+		<title>Opini.co.id</title> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/o.css" />
+    </head> 
+    <body>
+		<div id="main">
+			<div id="main_i">
+				<div id="header">
+					<table class="tb">
+						<tr>
+							<td style="padding-left:30px;opacity:0.2;"><img src="img/menu_header.png" alt=""/></td>
+							<td style="padding-left:55px;"><img src="img/logo_header.png" alt=""/></td>
+							<td style="padding-left:170px;opacity:0.2;"><img src="img/add_header.png" alt=""/></td>
+							<td style="padding-left:45px;"><img class="rou" src="img/pp.jpg" alt=""/></td>
+						</tr>
+					</table>
+				</div>
+				<div class="intro_top">
+					<div class="pr">
+						<div style="position:absolute;right:30px;top:15px;">
+							<a class="intro_bt" href="#">Next</a><!-- pake class intro_com buat colornya -->
+						</div>
+						<p class="t_medb" style="font-size:25px;color:#555;">Let's get started!</p>
+						Pick 3 or more topics of your interest.
+						<div style="position:absolute;top:95px;left:198px;">
+							<div class="intro_bar intro_com">&nbsp;</div>
+							<div class="intro_bar">&nbsp;</div>
+							<div class="intro_bar">&nbsp;</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div id="sports" class="col left" onclick="klik('sports');"><img src="img/sports.png" alt="" title=""/></div>
+						<div id="business" class="col" onclick="klik('business');"><img src="img/business.png" alt="" title=""/></div>
+						<div id="education" class="col right" onclick="klik('education');"><img src="img/education.png" alt="" title=""/></div>
+					</div>
+					<div class="row">
+						<div id="politics" class="col left" onclick="klik('politics');"><img src="img/politics.png" alt="" title=""/></div>
+						<div id="law" class="col" onclick="klik('law');"><img src="img/law.png" alt="" title=""/></div>
+						<div id="social" class="col right" onclick="klik('social');"><img src="img/social.png" alt="" title=""/></div>
+					</div>
+					<div class="row">
+						<div id="tech" class="col left" onclick="klik('tech');"><img src="img/tech.png" alt="" title=""/></div>
+						<div id="lifestyle" class="col" onclick="klik('lifestyle');"><img src="img/lifestyle.png" alt="" title=""/></div>
+						<div class="col right"><img src="img/suggest.png" alt="" title=""/></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery_191.js"></script>
+		<script src="js/o.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(window).scrollTop(0);
+			});
+			var anteng=0;
+			function klik(id){
+				if($("#"+id+" img").attr("src").indexOf("hover")!=-1){
+					if(anteng>0){
+						anteng--;
+					}
+					$("#"+id+" img").attr("src","img/"+id+".png");	
+				}else{
+					anteng++;
+					$("#"+id+" img").attr("src","img/"+id+"-hover.png");	
+				}
+				if(anteng>=3){
+					$(".intro_bt").addClass("intro_com").attr("href","intro2.html");
+				}else{
+					$(".intro_bt").removeClass("intro_com").attr("href","#");
+				}
+			}
+		</script>
+    </body> 	
+</html> 

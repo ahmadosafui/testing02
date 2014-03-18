@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+		<title>Opini.co.id</title> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/o.css" />
+    </head> 
+    <body>
+		<div id="main">
+			<div style="background:#f26522;padding:100px 70px 0px 70px;height:879px;">
+				<div style="font-size:50px;">
+					<div id="l1" style="position:relative;top:-200px;"><b>Ask,</b></div>
+					<div id="l2" style="position:relative;left:-800px;"><b>Discover,</b> and</div>
+					<div id="l3" style="display:none;"><b>Share</b> opinions for</div>
+					<div id="l4" style="display:none;">a better <b id="l5"style="display:none;">Indonesia.</b></div><br>
+					<img style="position:absolute;top:500px;left:221px;" src="img/logo_login.png" alt=""/>
+					<div style="height:275px;">&nbsp;</div>
+					<div style="font-size:25px;position:absolute;top:840px;">
+						<b>Let your opinion be heard & supported.</b><br>
+						<span class="t_medb">Join now or login with:</span>
+					</div>
+					<div style="height:55px;">&nbsp;</div>
+				</div>	
+			</div>
+			<div id="login_page_footer">
+				<div class="pr">
+					<img style="position:absolute;top:-70px;left:128px;" src="img/tail_login.png" alt=""/>
+					<a class="login_page_bt" href="intro1.html"><img src="img/fb_login.png" alt=""/></a>
+					<a class="login_page_bt" href="intro1.html"><img src="img/twitter_login.png" alt=""/></a>
+					<a class="login_page_bt" href="intro1.html"><img src="img/mail_login.png" alt=""/></a>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery_191.js"></script>
+		<script src="js/o.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(window).scrollTop(0);
+				setTimeout(function(){$('#l1').animate({top: '0px'},200);},600);
+				setTimeout(function(){$('#l2').animate({left: '0px'},300);},1100);
+				setTimeout(function(){$('#l3').fadeIn(400);},1600);
+				setTimeout(function(){$('#l4').fadeIn(600);},2200);
+				setTimeout(function(){$('#l5').fadeIn(2000);},3200);
+				setTimeout(function(){$("html, body").animate({ scrollTop: $(document).height()},1000);},5500);
+			});
+		</script>
+    </body> 	
+</html> 

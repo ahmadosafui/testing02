@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+		<title>Opini.co.id</title> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/o.css" />
+    </head> 
+    <body>
+		<div id="main">
+			<div id="header">
+				<table class="tb">
+					<tr>
+						<td style="padding-left:30px;opacity:0.2;"><img src="img/menu_header.png" alt=""/></td>
+						<td style="padding-left:55px;"><img src="img/logo_header.png" alt=""/></td>
+						<td style="padding-left:170px;opacity:0.2;"><img src="img/add_header.png" alt=""/></td>
+						<td style="padding-left:45px;"><img class="rou" src="img/pp.jpg" alt=""/></td>
+					</tr>
+				</table>
+			</div>
+			<div id="main_i">
+				<div class="intro_top">
+					<div class="pr">
+						<div style="position:absolute;right:30px;top:15px;">
+							<a class="intro_bt" href="#">Next</a><!-- pake class intro_com buat colornya -->
+						</div>
+						<p class="t_medb" style="font-size:25px;color:#555;">You're almost there...</p>
+						<div style="line-height:1.1;">
+							Track new opinions by<br>
+							following questions.
+						</div>
+						<div style="position:absolute;top:95px;left:198px;">
+							<div class="intro_bar intro_com">&nbsp;</div>
+							<div class="intro_bar intro_com">&nbsp;</div>
+							<div class="intro_bar">&nbsp;</div>
+						</div>
+					</div>
+				</div>
+				<div class="question">
+					<div id="q1" onclick="klik('q1')"><img src="img/q1.png" alt="" title="" /></div>
+					<div id="q2" onclick="klik('q2')"><img src="img/q2.png" alt="" title="" /></div>
+					<div id="q3" onclick="klik('q3')"><img src="img/q3.png" alt="" title="" /></div>
+					<div id="q4" onclick="klik('q4')"><img src="img/q4.png" alt="" title="" /></div>
+					<div id="q5" onclick="klik('q5')"><img src="img/q5.png" alt="" title="" /></div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery_191.js"></script>
+		<script src="js/o.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(window).scrollTop(0);
+			});
+			var anteng=0;
+			function klik(id){
+				if($("#"+id+" img").attr("src").indexOf("hover")!=-1){
+					if(anteng>0){
+						anteng--;
+					}
+					$("#"+id+" img").attr("src","img/"+id+".png");	
+				}else{
+					anteng++;
+					$("#"+id+" img").attr("src","img/"+id+"-hover.png");	
+				}
+				if(anteng>=1){
+					$(".intro_bt").addClass("intro_com").attr("href","intro3.html");
+				}else{
+					$(".intro_bt").removeClass("intro_com").attr("href","#");
+				}
+			}
+		</script>
+    </body> 	
+</html> 
